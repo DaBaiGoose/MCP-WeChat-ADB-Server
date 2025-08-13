@@ -1,6 +1,6 @@
 # MCP WeChat ADB Server
 
-一个基于 ADB 的微信自动化 MCP 服务器，为 AI 助手提供微信消息发送和截图功能。适配雷电模拟器（LDPlayer 9），通过 MCP 协议暴露工具接口。
+一个基于 ADB 的微信自动化 MCP 服务器，为 AI 助手提供微信消息发送和截图功能。适配雷电模拟器（LDPlayer 9），通过 MCP 协议暴露工具接口。MCP入口文件是 main.py
 
 ## 🚀 功能特性
 
@@ -198,6 +198,7 @@ python main.py
 - 使用本工具时请遵守相关法律法规和微信用户协议
 - 请勿用于商业用途或恶意用途
 - `pyproject.toml` 已通过打包排除规则避免将 `runtime/`、`screens/` 等内容发布到分发包
+
 
 
 
