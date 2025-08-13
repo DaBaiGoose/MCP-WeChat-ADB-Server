@@ -118,8 +118,7 @@ uv pip install "mcp[cli]"
 ```
 给 AAA、 BBB 发信息说我今晚不回家，分别截图
 ```
-[![演示视频]()](https://github.com/user-attachments/assets/0ec32420-ddcc-4d1e-9482-905de7c3cf8f)
-https://github.com/user-attachments/assets/0ec32420-ddcc-4d1e-9482-905de7c3cf8f
+[![演示视频]()]((https://github-production-user-asset-6210df.s3.amazonaws.com/22809627/477622786-0ec32420-ddcc-4d1e-9482-905de7c3cf8f.mp4))
 
 #### 重要提醒：联系人名称
 ⚠️ **AAA、BBB 需要是微信中联系人或群聊的名字/备注中能搜索到的唯一名称，这样才能根据名字准确找到指定对方并进入对话**
@@ -167,6 +166,7 @@ ldplayer_install_dir = r"D:\\Program\\leidian\\LDPlayer9"
 - 使用本工具时请遵守相关法律法规和微信用户协议
 - 请勿用于商业用途或恶意用途
 - `pyproject.toml` 已通过打包排除规则避免将 `runtime/`、`screens/` 等内容发布到分发包
+
 
 
 
