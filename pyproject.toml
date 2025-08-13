@@ -1,0 +1,32 @@
+[build-system]
+requires = ["hatchling>=1.25.0"]
+build-backend = "hatchling.build"
+
+[project]
+name = "mcp-wechat-adb-server"
+version = "0.1.0"
+description = "A MCP Server for WeChat automation via ADB, supporting message sending and screenshot capture"
+readme = "README.md"
+requires-python = ">=3.13"
+authors = [
+  { name = "MCP WeChat ADB", email = "your-email@example.com" }
+]
+license = { text = "MIT" }
+dependencies = [
+  "mcp>=1.12.4",
+  "pywin32>=311; sys_platform == 'win32'",
+]
+
+[project.urls]
+Homepage = "https://github.com/your-username/mcp-wechat-adb-server"
+Repository = "https://github.com/your-username/mcp-wechat-adb-server"
+Issues = "https://github.com/your-username/mcp-wechat-adb-server/issues"
+
+[tool.hatch.build]
+exclude = [
+  "runtime/**",
+  "screens/**",
+  "__pycache__/**",
+]
+
+
