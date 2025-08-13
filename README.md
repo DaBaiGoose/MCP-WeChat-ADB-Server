@@ -1,6 +1,6 @@
 # MCP WeChat ADB Server
 
-一个基于 ADB 的微信自动化 MCP 服务器，为 AI 助手提供微信消息发送和截图功能。适配雷电模拟器（LDPlayer 9），通过 MCP 协议暴露工具接口。MCP入口文件是 main.py
+一个基于 ADB 的微信自动化 MCP 服务器，为 AI 助手提供微信消息发送和截图功能，可以实现 AI 自动对多个联系人微信回复不同的个性化消息，满足商务生活需求。适配雷电模拟器（LDPlayer 9），通过 MCP 协议暴露工具接口。MCP入口文件是 main.py
 
 ## 🚀 功能特性
 
@@ -118,7 +118,7 @@ uv pip install "mcp[cli]"
 ```
 给 AAA、 BBB 发信息说我今晚不回家，分别截图
 ```
-
+[![演示视频]()](https://github.com/DaBaiGoose/MCP-WeChat-ADB-Server/blob/main/MCP-WeChat-ADB-Server%E6%BC%94%E7%A4%BA.mp4)
 #### 重要提醒：联系人名称
 ⚠️ **AAA、BBB 需要是微信中联系人或群聊的名字/备注中能搜索到的唯一名称，这样才能根据名字准确找到指定对方并进入对话**
 
@@ -165,4 +165,5 @@ ldplayer_install_dir = r"D:\\Program\\leidian\\LDPlayer9"
 - 使用本工具时请遵守相关法律法规和微信用户协议
 - 请勿用于商业用途或恶意用途
 - `pyproject.toml` 已通过打包排除规则避免将 `runtime/`、`screens/` 等内容发布到分发包
+
 
