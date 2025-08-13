@@ -180,9 +180,9 @@ python main.py
 - 连接失败或超时：
   - 确认 `adb.exe` 路径是否正确，能否执行：
     ```powershell
+    "D:\Program\leidian\LDPlayer9\adb.exe" devices  
     "D:\Program\leidian\LDPlayer9\adb.exe" connect 127.0.0.1:5555
-    "D:\Program\leidian\LDPlayer9\adb.exe" -s 127.0.0.1:5555 devices
-    "D:\Program\leidian\LDPlayer9\adb.exe" devices
+    "D:\Program\leidian\LDPlayer9\adb.exe" -s 127.0.0.1:5555 shell screencap -p /sdcard/screen.png
     ```
   - 确认模拟器中 ADB 端口与 `ld_adb_address` 一致。
   - 确认模拟器中 ADB 端口与 `DEVICE` 变量一致。
@@ -198,5 +198,6 @@ python main.py
 - 使用本工具时请遵守相关法律法规和微信用户协议
 - 请勿用于商业用途或恶意用途
 - `pyproject.toml` 已通过打包排除规则避免将 `runtime/`、`screens/` 等内容发布到分发包
+
 
 
