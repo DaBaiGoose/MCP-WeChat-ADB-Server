@@ -63,7 +63,15 @@ uv pip install "mcp[cli]"
    ```powershell
    python main.py
    ```
+运行后会启动 MCP SSE 服务并注册以下工具：
 
+- `send_wechat_message(name: str, message: str) -> str`
+  - 功能：给指定联系人发送消息
+  - 依赖：微信已登录、ADB 输入法已激活
+
+- `screen_save() -> str`
+  - 功能：在模拟器上截图并保存到 `screens/` 目录
+    
 #### 第四步：配置 Cursor MCP
 1. 在 Cursor 中设置：Tools and Integrations → Add Custom MCP
 2. 在 `mcp.json` 文件中写入：
@@ -76,7 +84,7 @@ uv pip install "mcp[cli]"
      }
    }
    ```
-3. 开启这个 MCP Tools，显示小绿点以后即可正常在 Agent 里对话了
+3. 开启这个 MCP Tools，显示小绿点以后即可正常在Cursor的 Agent 对话框里对话了
 
 ### 重要注意事项
 
@@ -91,64 +99,6 @@ uv pip install "mcp[cli]"
 - `adb_utils.py`：ADB 基础能力（连接、点击、输入法激活、截图、分辨率、Activity 检测等）。
 - `ADBKeyboard.apk`：通过广播输入文本所需的输入法 APK（首次会自动安装并激活）。
 - `screens/`：截图输出目录（自动创建）。
-
-### 安装
-
-1) 创建虚拟环境
-
-```powershell
-python -m venv .venv
-.\.venv\Scripts\activate
-```
-
-2) 安装依赖（基于 `pyproject.toml`）
-
-```powershell
-pip install -e .
-```
-
-这会安装 `mcp>=1.12.4`。ADB 由雷电模拟器自带的 `adb.exe` 提供，无需额外 Python 依赖。
-
-### 配置
-
-项目中有两处需要根据本机环境修改的配置：
-
-- `main.py` 顶部：
-  - `ldplayer_dir`（示例：`D:\Program\leidian\LDPlayer9`）
-  - `DEVICE`（示例：`"127.0.0.1:5555"`，通过 `{模拟器路径}\adb.exe devices` 命令查看）
-
-- `adb_utils.py` 顶部：
-  - `ldplayer_install_dir`（同上）
-  - `ld_adb_address`（同上）
-
-注意：路径分隔符在 Windows 下建议使用原始字符串或双反斜杠，例如：
-
-```python
-ldplayer_install_dir = r"D:\\Program\\leidian\\LDPlayer9"
-```
-
-首次运行会自动检查并安装/激活 `ADBKeyboard.apk`，若自动激活失败，可手动执行：
-
-```powershell
-"D:\Program\leidian\LDPlayer9\adb.exe" -s 127.0.0.1:5555 install -r ADBKeyboard.apk
-"D:\Program\leidian\LDPlayer9\adb.exe" -s 127.0.0.1:5555 shell ime enable com.android.adbkeyboard/.AdbIME
-"D:\Program\leidian\LDPlayer9\adb.exe" -s 127.0.0.1:5555 shell ime set com.android.adbkeyboard/.AdbIME
-```
-
-### 运行
-
-```powershell
-python main.py
-```
-
-运行后会启动 MCP SSE 服务并注册以下工具：
-
-- `send_wechat_message(name: str, message: str) -> str`
-  - 功能：给指定联系人发送消息
-  - 依赖：微信已登录、ADB 输入法已激活
-
-- `screen_save() -> str`
-  - 功能：在模拟器上截图并保存到 `screens/` 目录
 
 ### 使用示例
 
@@ -177,6 +127,20 @@ python main.py
 
 ### 常见问题排查
 
+路径分隔符在 Windows 下建议使用原始字符串或双反斜杠，例如：
+
+```python
+ldplayer_install_dir = r"D:\\Program\\leidian\\LDPlayer9"
+```
+
+首次运行会自动检查并安装/激活 `ADBKeyboard.apk`，若自动激活失败，可手动执行例如：
+
+```powershell
+"D:\Program\leidian\LDPlayer9\adb.exe" -s 127.0.0.1:5555 install -r ADBKeyboard.apk
+"D:\Program\leidian\LDPlayer9\adb.exe" -s 127.0.0.1:5555 shell ime enable com.android.adbkeyboard/.AdbIME
+"D:\Program\leidian\LDPlayer9\adb.exe" -s 127.0.0.1:5555 shell ime set com.android.adbkeyboard/.AdbIME
+```
+
 - 连接失败或超时：
   - 确认 `adb.exe` 路径是否正确，能否执行：
     ```powershell
@@ -198,7 +162,3 @@ python main.py
 - 使用本工具时请遵守相关法律法规和微信用户协议
 - 请勿用于商业用途或恶意用途
 - `pyproject.toml` 已通过打包排除规则避免将 `runtime/`、`screens/` 等内容发布到分发包
-
-
-
-
