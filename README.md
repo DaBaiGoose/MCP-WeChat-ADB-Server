@@ -118,7 +118,7 @@ uv pip install "mcp[cli]"
 ```
 给 AAA、 BBB 发信息说我今晚不回家，分别截图
 ```
-演示视频链接：https://github.com/user-attachments/assets/0ec32420-ddcc-4d1e-9482-905de7c3cf8f  
+演示视频：
 
 [https://github-production-user-asset-6210df.s3.amazonaws.com/22809627/477622786-0ec32420-ddcc-4d1e-9482-905de7c3cf8f.mp4](https://private-user-images.githubusercontent.com/22809627/477629438-e4108c91-e09b-427f-8179-1bd53feb5c2b.mp4?jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3NTUxMDAwNjMsIm5iZiI6MTc1NTA5OTc2MywicGF0aCI6Ii8yMjgwOTYyNy80Nzc2Mjk0MzgtZTQxMDhjOTEtZTA5Yi00MjdmLTgxNzktMWJkNTNmZWI1YzJiLm1wND9YLUFtei1BbGdvcml0aG09QVdTNC1ITUFDLVNIQTI1NiZYLUFtei1DcmVkZW50aWFsPUFLSUFWQ09EWUxTQTUzUFFLNFpBJTJGMjAyNTA4MTMlMkZ1cy1lYXN0LTElMkZzMyUyRmF3czRfcmVxdWVzdCZYLUFtei1EYXRlPTIwMjUwODEzVDE1NDI0M1omWC1BbXotRXhwaXJlcz0zMDAmWC1BbXotU2lnbmF0dXJlPWZmYTdhN2RiN2ZlZWMyMjcyNmRlMDRjMGRhNTIyNTZlMDRkOTc4YjgwM2Y0MzFhYmU0MmQwZmM2MmRlNTEzZWEmWC1BbXotU2lnbmVkSGVhZGVycz1ob3N0In0.g-nHSS69EJpZcRuyeuEOw_5mYgc38pIBS9m7yaD9zN8)
 
@@ -168,6 +168,7 @@ ldplayer_install_dir = r"D:\\Program\\leidian\\LDPlayer9"
 - 使用本工具时请遵守相关法律法规和微信用户协议
 - 请勿用于商业用途或恶意用途
 - `pyproject.toml` 已通过打包排除规则避免将 `runtime/`、`screens/` 等内容发布到分发包
+
 
 
 
